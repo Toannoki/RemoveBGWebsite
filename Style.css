@@ -4,26 +4,18 @@ body {
   margin: 0;
   padding: 0;
 }
-
-.nav-bar {
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-}
-
 .hero-section {
   display: block;
   justify-content: center; /* căn giữa theo chiều ngang */
-  align-items: center;     /* căn giữa theo chiều dọc */
-  text-align: center;
+  align-items:center;     /* căn giữa theo chiều dọc */
+  text-align: left;
   padding: 30px 20px;
   margin-top: 50px;
+  margin-left: 100px;
   align-items: center;
 }
 .hero-image{
   width: 350px;
-  
 }
 
 .hero-text h1 {
@@ -31,7 +23,6 @@ body {
   margin-bottom: 10px;
   font-weight: bold;
   text-align: left;
-  padding-left: 200px;
 }
 .hero-text p {
   font-size: 25px;
@@ -39,7 +30,6 @@ body {
   font-style: italic;
   font-weight:400;
   text-align: left;
-  padding-left: 200px;
 }
 .hero-text p span{
   background-color: yellow;
@@ -69,7 +59,8 @@ body {
   font-weight: bold;
   color: #f8f8f8;
   font-size: 30px;
-   transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  border-style: none;
 }
 .upload-btn:hover{
   background-color: rgba(126, 178, 238, 0.781);
@@ -102,12 +93,18 @@ body {
   background-color: #fff; /* hoặc màu bạn thích */
   padding: 10px 30px;
   box-shadow: 0 2px 5px rgba(255, 1, 1, 0.199);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
 }
 
 .nav-content {
   display: flex;
   align-items: center;
-  max-width: 3600px;
+  width: 100%;
+  height: 50px;
 }
 
 /* Cho các <ul> nằm ngang */
@@ -115,8 +112,14 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
-  margin: 0;
-  padding: 0;
+  margin-top: 15px;
+}
+.nav-content .nav-auth {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-left: 50px;
+  text-align: right;
 }
 /* Tùy chỉnh nút */
 .nav-content button {
@@ -127,10 +130,12 @@ body {
 }
 
 /* Tùy chỉnh logo nếu cần */
-.nav-content img {
+.nav-content .website-icon {
   width: 120px;
   height: 50px;
-  object-fit: contain;
+}
+.nav-content .dropdown-image {
+  width: 60px;
 }
 .nav-content li button {
   padding: 7px 15px;
@@ -149,6 +154,53 @@ body {
 .nav-content li button:hover{
   background-color: rgb(182, 185, 187);
 }
+.features{
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  background-color: white;
+  box-shadow: 0 0 50px 10px rgba(173, 119, 119, 0.295);
+  margin-top: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 33%; /* hoặc bạn để width cụ thể */
+  padding: 20px 0;
+  box-sizing: border-box;
+  
+}
+.scroll-inner {
+  width: 98%;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 100px;
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+.dropdown-item {
+  display: flex !important;
+  align-items: center;
+  padding: 20px !important;
+  margin: 0 30px; /* trái phải đều nhau */
+  border-radius: 10px;  
+  width: 100% !important;
+  margin-top: 10;
+  transition: background-color 0.5s;
+}
+.dropdown-item:hover {
+  background-color: #c6c3c3;
+}
+.dropdown-item:active {
+  background-color: #999797 !important;
+}
+.dropdown-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px;
+}
+
 
 
 
