@@ -269,6 +269,16 @@ body {
   width: 100%;
 }
 
+.edit-tab{
+  display: none;
+}
+.edit-tab .edit-image{
+  border-radius: 20px;
+  margin-top: 100px;
+  width: 39%;
+  margin-left: 50px;
+}
+
 
 
 
